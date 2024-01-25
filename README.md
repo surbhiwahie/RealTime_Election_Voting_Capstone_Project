@@ -6,3 +6,9 @@ This project proposes building a real-time election voting system to ensure inst
 The architecture of the project includes parties, candidates, and voters registered on the platform, with their information saved in a Postgres database and streamed simultaneously into Kafka.
 
 A Spark job will listen for events coming into Kafka, consume and aggregate the data, and stream it back into another Kafka topic. Streamlit will listen for events coming into the Kafka topic and visualize the results in real time.
+
+# Architecture Diagram
+ 
+
+![image](https://github.com/surbhiwahie/RealTime_Election_Voting_Capstone_Project/assets/24772688/ed8f1e38-6e42-4c28-b12d-a97465599599)
+
