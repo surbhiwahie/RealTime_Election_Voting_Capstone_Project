@@ -29,29 +29,29 @@ streamlit-app.py: This is the Python script that contains the logic to consume t
 
 
 # Project Initialization and Architecture Setup:
-Defined the objective of building a real-time election voting system.
-Established the system architecture with components such as parties, candidates, and voters stored in Postgres and streamed into Kafka.
-Configured a Spark job to consume, aggregate data from Kafka, and stream it back into another Kafka topic.
-Integrated Streamlit for real-time visualization of election results.
+1. Defined the objective of building a real-time election voting system.
+2. Established the system architecture with components such as parties, candidates, and voters stored in Postgres and streamed into Kafka.
+3. Configured a Spark job to consume, aggregate data from Kafka, and stream it back into another Kafka topic.
+4. Integrated Streamlit for real-time visualization of election results.
 
 # Data Generation Module:
-Implemented a Data Generation module utilizing the "Random User Generator" API.
-Conducted Voter Data Generation fetching random user data with the nationality parameter set to "gb" and Candidate Data Generation with a specific gender parameter.
-Utilized Python requests library and the random module to seed and control the randomness of generated data.
-Produced synthetic voter and candidate data for testing, development, and demonstration purposes.
+1. Implemented a Data Generation module utilizing the "Random User Generator" API.
+2. Conducted Voter Data Generation fetching random user data with the nationality parameter set to "gb" and Candidate Data Generation with a specific gender parameter.
+3. Utilized Python requests library and the random module to seed and control the randomness of generated data.
+4. Produced synthetic voter and candidate data for testing, development, and demonstration purposes.
 
 # Implementation Details and System Components:
 
-Developed main.py script for creating required tables on Postgres (candidates, voters, and votes), handling data quality errors, creating Kafka topics, and ensuring table creation before data insertion.
-Implemented voting.py script for consuming votes from the Kafka topic (voters_topic), generating voting data, and producing data to votes_topic on Kafka.
-Created spark-streaming.py for consuming votes from Kafka, enriching data from Postgres, aggregating votes, and producing data to specific topics on Kafka.
-Designed streamlit-app.py for consuming aggregated voting data from Kafka and Postgres, displaying real-time voting data using Streamlit.
+1. Developed main.py script for creating required tables on Postgres (candidates, voters, and votes), handling data quality errors, creating Kafka topics, and ensuring table creation before data insertion.
+2. Implemented voting.py script for consuming votes from the Kafka topic (voters_topic), generating voting data, and producing data to votes_topic on Kafka.
+3. Created spark-streaming.py for consuming votes from Kafka, enriching data from Postgres, aggregating votes, and producing data to specific topics on Kafka.
+4. Designed streamlit-app.py for consuming aggregated voting data from Kafka and Postgres, displaying real-time voting data using Streamlit.
 
 # Data Quality Checks Module:
 
-Implemented Referential Integrity Check to ensure each vote has a corresponding voter, flagging any discrepancies for further investigation.
-Executed Sanity Row Counts Check to verify that the number of records in key tables ("voters," "candidates," and "votes") aligns with expectations.
-Provided a screenshot of data quality checks in the documentation.
+1. Implemented Referential Integrity Check to ensure each vote has a corresponding voter, flagging any discrepancies for further investigation.
+2. Executed Sanity Row Counts Check to verify that the number of records in key tables ("voters," "candidates," and "votes") aligns with expectations.
+3. Provided a screenshot of data quality checks in the documentation.
 
 
 
