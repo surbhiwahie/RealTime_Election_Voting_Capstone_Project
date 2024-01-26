@@ -11,7 +11,7 @@ A Spark job will listen for events coming into Kafka, consume and aggregate the 
  
 <img width="468" alt="image" src="https://github.com/surbhiwahie/RealTime_Election_Voting_Capstone_Project/assets/24772688/ed2957f7-f1cd-4d88-90c4-db00e61d14a5">
 
-# System Components
+# Queries and Their Results:
 
 main.py:  This is the main Python script that creates the required tables on postgres (candidates, voters and votes), it also creates the Kafka topic and creates a copy of the votes table in the Kafka topic. It also contains the logic to consume the votes from the Kafka topic and produce data to voters_topic on Kafka.
 
@@ -22,10 +22,11 @@ spark-streaming.py: This Python script contains the logic to consume the votes f
 streamlit-app.py: This is the Python script that contains the logic to consume the aggregated voting data from the Kafka topic as well as postgres and display the voting data in realtime using Streamlit.
 
 # Expected Outputs of the Project:
-The expected outputs include real-time visualizations of election data, showcasing how each candidate gains votes. These visualizations will be accessible through the Streamlit interface.
 
-# Queries and Their Results:
-The main queries involve consuming and aggregating data from Kafka, enriching data from Postgres, and performing referential integrity checks. Results are used for real-time visualization and reporting any data quality issues.
+<img width="468" alt="image" src="https://github.com/surbhiwahie/RealTime_Election_Voting_Capstone_Project/assets/24772688/28303c3d-ff88-4b49-bde8-1d6194f5fbb8">
+
+<img width="396" alt="image" src="https://github.com/surbhiwahie/RealTime_Election_Voting_Capstone_Project/assets/24772688/5373d73f-85e2-4a78-bebf-13623d50420c">
+
 
 # Choice of Data Sets:
 The data sets from the "Random User Generator" API were chosen to simulate realistic user interactions, providing diverse voter and candidate profiles for testing and development.
