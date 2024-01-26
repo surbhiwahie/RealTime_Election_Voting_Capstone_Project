@@ -28,11 +28,10 @@ streamlit-app.py: This is the Python script that contains the logic to consume t
 <img width="396" alt="image" src="https://github.com/surbhiwahie/RealTime_Election_Voting_Capstone_Project/assets/24772688/5373d73f-85e2-4a78-bebf-13623d50420c">
 
 
-# Project Initialization and Architecture Setup:
-1. Defined the objective of building a real-time election voting system.
-2. Established the system architecture with components such as parties, candidates, and voters stored in Postgres and streamed into Kafka.
-3. Configured a Spark job to consume, aggregate data from Kafka, and stream it back into another Kafka topic.
-4. Integrated Streamlit for real-time visualization of election results.
+# Architecture Setup:
+1. Established the system architecture with components such as parties, candidates, and voters stored in Postgres and streamed into Kafka.
+2. Configured a Spark job to consume, aggregate data from Kafka, and stream it back into another Kafka topic.
+3. Integrated Streamlit for real-time visualization of election results.
 
 # Data Generation Module:
 1. Implemented a Data Generation module utilizing the "Random User Generator" API.
