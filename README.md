@@ -51,7 +51,7 @@ streamlit-app.py: This is the Python script that contains the logic to consume t
 
 1. Implemented Referential Integrity Check to ensure each vote has a corresponding voter, flagging any discrepancies for further investigation.
 2. Executed Sanity Row Counts Check to verify that the number of records in key tables ("voters," "candidates," and "votes") aligns with expectations.
-3. Provided a screenshot of data quality checks in the documentation.
+3. Provided a screenshot of data quality checks in the Project Specification document.
 
 
 
